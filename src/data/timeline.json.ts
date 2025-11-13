@@ -10,7 +10,7 @@ export const timeline: TimelineItem[] = [
     period: "Feb 2025 — Jun 2025",
     title: "Extern Researcher —  Google",
     organization: "Remote",
-    summary: "Worked with Google's Gemini 2.0 folks on long-context LLM evaluation and scalable scoring tools.",
+    summary: "Worked with Google's Gemini 2.0 team on long-context LLM evaluation and scalable scoring tools.",
   },
   {
     period: "Jan 2024 — Dec 2025 (expected)",
@@ -22,7 +22,7 @@ export const timeline: TimelineItem[] = [
     period: "Jun 2021 — Aug 2023",
     title: "Fullstack Software Engineer",
     organization: "Salesforce — Remote",
-    summary: "Built front-end components and high-performance REST APIs for Financial Services companies.",
+    summary: "Built front-end components and high-performance REST APIs as part of the Financial Services Cloud.",
   },
   {
     period: "May 2020 — Jul 2020",
