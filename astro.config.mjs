@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   // add yur domain name here
-  site: 'https://yourdomain.com',
+  site: 'https://suprajb.github.io',
   compressHTML: true,
   integrations: [sitemap()]
 });
