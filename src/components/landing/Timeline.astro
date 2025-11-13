@@ -1,0 +1,57 @@
+---
+import { timeline } from "@/data/timeline.json";
+
+function calculateAosDuration(index: number) {
+  return 300 + index * 50;
+}
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-24">
+    <div class="space-y-2">
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="260">
+      </div>
+      <h3
+        class="text-secondary text-sm font-medium"
+        data-aos="fade-up"
+        data-aos-duration="300">
+        <span>career</span>
+        <span class="font-bold">timeline</span>
+      </h3>
+     
+    </div>
+
+    <div class="relative mt-16">
+      <div class="absolute left-0 top-0 bottom-0 w-px bg-secondary/30" aria-hidden="true"></div>
+      <ul class="pl-9 sm:pl-12 flex flex-col gap-12">
+        {
+          timeline.map((step, index) => (
+            <li
+              class="relative"
+              data-aos="fade-up"
+              data-aos-duration={calculateAosDuration(index)}
+            >
+              <div class="flex flex-col gap-3 sm:grid sm:grid-cols-[7.5rem,1fr] sm:gap-10 sm:items-start">
+                <p class="text-xs uppercase tracking-[0.3em] text-secondary">
+                  {step.period}
+                </p>
+                <div class="text-secondary space-y-2 sm:flex-1">
+                  <div class="space-y-1">
+                    <h4 class="text-xl font-semibold">{step.title}</h4>
+                    <p class="text-sm font-medium opacity-80">{step.organization}</p>
+                  </div>
+                  <p class="text-base leading-relaxed opacity-80">
+                    {step.summary}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

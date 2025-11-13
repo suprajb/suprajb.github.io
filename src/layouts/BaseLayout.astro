@@ -1,0 +1,22 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+---
+
+<html lang="en" class="selection:bg-secondary selection:text-secondary">
+  <head>
+    <BaseHead />
+  </head>
+
+  <body class="bg-primary">
+    <slot />
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript">
+      AOS.init({
+        once: true,
+        duration: 400,
+        easing: 'ease-out',
+        offset: 10,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: Geist, sans-serif;
+  --color-secondary: #161614;
+  --color-primary: #f4f5ef;
+  --color-hero-bg: #f54900;
+}
+* {
+  font-variant-numeric: tabular-nums;
+}
