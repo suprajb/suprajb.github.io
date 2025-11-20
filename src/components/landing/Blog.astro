@@ -1,0 +1,88 @@
+---
+const posts = [
+  {
+    title: "Scaling retrieval for agentic systems",
+    url: "/blog/scaling-retrieval",
+    summary:
+      "Notes on latency budgets, chunking strategy, and how to keep signal when the corpus keeps growing.",
+    date: "2024-06-12",
+    type: "note",
+  },
+  {
+    title: "Instrumenting side projects like products",
+    url: "/blog/instrumenting-side-projects",
+    summary:
+      "A short write-up on setting up telemetry and tracing for small builds without crushing focus.",
+    date: "2024-05-03",
+    type: "post",
+  },
+  {
+    title: "GPU scheduling on a budget",
+    url: "/blog/gpu-scheduling",
+    summary:
+      "Rough experiments with preemption windows, queue design, and running LLM evals without burning cash.",
+    date: "2024-03-18",
+    type: "note",
+  },
+];
+
+const formatDate = (date: string) =>
+  new Intl.DateTimeFormat("en", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(date));
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-24">
+    <div class="space-y-2">
+      <div class="h-0.5 bg-secondary" data-aos="fade-up" data-aos-duration="260"></div>
+      <h3
+        class="text-secondary text-sm font-medium flex items-center gap-3"
+        data-aos="fade-up"
+        data-aos-duration="300"
+      >
+        <span>writing</span>
+        <span class="font-bold">notes</span>
+        <span class="italic">and blog posts</span>
+        <span class="inline-flex items-center gap-2 rounded-full border border-secondary/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em]">
+          <span class="h-2 w-2 rounded-full bg-accent"></span>
+          <span>signal</span>
+        </span>
+      </h3>
+      <div class="h-1.5 bg-secondary" data-aos="fade-up" data-aos-duration="320"></div>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 gap-10">
+      {posts.map((post, index) => (
+        <a
+          href={post.url}
+          class="group block border border-secondary/30 bg-primary/40 px-6 py-6 transition duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-[0_16px_50px_-30px_rgba(245,73,0,0.5)]"
+          data-aos="fade-up"
+          data-aos-duration={320 + index * 40}
+        >
+          <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-secondary/80">
+            <span class="rounded-full border border-secondary/30 px-3 py-1 font-semibold text-secondary">
+              {post.type}
+            </span>
+            <span class="rounded-full bg-accent px-3 py-1 font-semibold text-primary">
+              {formatDate(post.date)}
+            </span>
+          </div>
+          <div class="mt-4 space-y-2">
+            <p class="text-2xl text-secondary font-semibold">{post.title}</p>
+            <p class="text-sm text-secondary/80 leading-relaxed">
+              {post.summary}
+            </p>
+          </div>
+          <div class="mt-4 text-xs text-secondary">
+            <span class="underline decoration-accent underline-offset-4 transition-colors group-hover:text-accent">
+              Read
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
