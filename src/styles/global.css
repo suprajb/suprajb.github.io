@@ -3,8 +3,16 @@
   --font-sans: Geist, sans-serif;
   --color-secondary: #161614;
   --color-primary: #f4f5ef;
-  --color-hero-bg: #f54900;
+  --color-accent: #f54900;
+  --color-hero-bg: var(--color-accent);
 }
 * {
   font-variant-numeric: tabular-nums;
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
 }
