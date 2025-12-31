@@ -22,7 +22,7 @@ export const timeline: TimelineItem[] = [
     period: "Jun 2021 — Aug 2023",
     title: "Fullstack Software Engineer",
     organization: "Salesforce — Remote",
-    summary: "Built front-end components and high-performance REST APIs as part of the Financial Services Cloud.",
+    summary: "Engineered high-throughput APIs and optimized frontend rendering for Financial Services Cloud, supporting enterprise-scale traffic.",
   },
   {
     period: "May 2020 — Jul 2020",
