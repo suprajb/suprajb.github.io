@@ -7,6 +7,12 @@ export interface TimelineItem {
 
 export const timeline: TimelineItem[] = [
   {
+    period: "Feb 2026 — Present",
+    title: "AI SWE — Amari AI",
+    organization: "San Francisco",
+    summary: "Building AI agents for global logistics.",
+  },
+  {
     period: "Feb 2025 — Jun 2025",
     title: "Extern Researcher —  Google",
     organization: "Remote",
